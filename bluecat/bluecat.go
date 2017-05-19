@@ -15,30 +15,68 @@ import (
 var _ time.Time
 var _ xml.Name
 
+// ProteusAPI :: Does Something
 type ProteusAPI struct {
 	client *SOAPClient
 }
 
 // Added!
+
+// Long :: Does Something
 type Long struct{}
+
+// APIEntity :: Does Something
 type APIEntity struct{}
+
+// APIEntityArray :: Does Something
 type APIEntityArray struct{}
+
+// Int :: does something
 type Int struct{}
+
+// APIDeploymentRole :: does something
 type APIDeploymentRole struct{}
+
+// APIDeploymentRoleArray :: does something
 type APIDeploymentRoleArray struct{}
+
+// APIDeploymentOption :: does something
 type APIDeploymentOption struct{}
+
+// APIDeploymentOptionArray :: does something
 type APIDeploymentOptionArray struct{}
+
+// LongArray :: Does Something
 type LongArray struct{}
+
+// Boolean :: does something
 type Boolean struct{}
+
+// String :: does something
 type String struct{}
+
+// APIAccessRight :: does something
 type APIAccessRight struct{}
+
+// APIData :: does something
 type APIData struct{}
+
+// StringArray :: does something
 type StringArray struct{}
+
+// Base64Binary :: does something
 type Base64Binary struct{}
+
+//APIAccessRightArray :: does something
 type APIAccessRightArray struct{}
+
+// APIUserDefinedFieldArray :: does something
 type APIUserDefinedFieldArray struct{}
+
+// ResponsePolicySearchResultArray :: does something
 type ResponsePolicySearchResultArray struct{}
 
+// NewProteusAPI :: returns a new proteus api client
 func NewProteusAPI(url string, tls bool, auth *BasicAuth) *ProteusAPI {
 	if url == "" {
 		url = ""
@@ -50,6 +88,7 @@ func NewProteusAPI(url string, tls bool, auth *BasicAuth) *ProteusAPI {
 	}
 }
 
+// GetEntities :: returns a list of entitities
 func (service *ProteusAPI) GetEntities(request *Long) (*APIEntityArray, error) {
 	response := new(APIEntityArray)
 	err := service.client.Call("", request, response)
@@ -60,6 +99,7 @@ func (service *ProteusAPI) GetEntities(request *Long) (*APIEntityArray, error) {
 	return response, nil
 }
 
+// AddHostRecord :: adds a host A record
 func (service *ProteusAPI) AddHostRecord(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -70,6 +110,7 @@ func (service *ProteusAPI) AddHostRecord(request *Long) (*Long, error) {
 	return response, nil
 }
 
+// AddAliasRecord :: adds an CNAME alias record
 func (service *ProteusAPI) AddAliasRecord(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -80,6 +121,7 @@ func (service *ProteusAPI) AddAliasRecord(request *Long) (*Long, error) {
 	return response, nil
 }
 
+// AddMXRecord :: Adds a mail MX record
 func (service *ProteusAPI) AddMXRecord(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -90,6 +132,7 @@ func (service *ProteusAPI) AddMXRecord(request *Long) (*Long, error) {
 	return response, nil
 }
 
+// AddSRVRecord :: adds an SRV record
 func (service *ProteusAPI) AddSRVRecord(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -100,6 +143,7 @@ func (service *ProteusAPI) AddSRVRecord(request *Long) (*Long, error) {
 	return response, nil
 }
 
+// AddTXTRecord :: adds a TXT record
 func (service *ProteusAPI) AddTXTRecord(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -110,6 +154,7 @@ func (service *ProteusAPI) AddTXTRecord(request *Long) (*Long, error) {
 	return response, nil
 }
 
+// AddHINFORecord :: adds an HINFO record
 func (service *ProteusAPI) AddHINFORecord(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -120,6 +165,7 @@ func (service *ProteusAPI) AddHINFORecord(request *Long) (*Long, error) {
 	return response, nil
 }
 
+// AddNAPTRRecord :: adds a NAPTR record
 func (service *ProteusAPI) AddNAPTRRecord(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -130,6 +176,7 @@ func (service *ProteusAPI) AddNAPTRRecord(request *Long) (*Long, error) {
 	return response, nil
 }
 
+// AddGenericRecord :: adds a generic record
 func (service *ProteusAPI) AddGenericRecord(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -140,6 +187,7 @@ func (service *ProteusAPI) AddGenericRecord(request *Long) (*Long, error) {
 	return response, nil
 }
 
+// AddStartOfAuthority :: adds an SOA
 func (service *ProteusAPI) AddStartOfAuthority(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -150,6 +198,7 @@ func (service *ProteusAPI) AddStartOfAuthority(request *Long) (*Long, error) {
 	return response, nil
 }
 
+// AddACL :: adds an ACL
 func (service *ProteusAPI) AddACL(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
