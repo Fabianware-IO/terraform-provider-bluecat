@@ -209,6 +209,7 @@ func (service *ProteusAPI) AddACL(request *Long) (*Long, error) {
 	return response, nil
 }
 
+// AddUserGroup :: Adds a user group
 func (service *ProteusAPI) AddUserGroup(request *String) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -219,6 +220,7 @@ func (service *ProteusAPI) AddUserGroup(request *String) (*Long, error) {
 	return response, nil
 }
 
+// AddTagGroup :: Adds a tag group
 func (service *ProteusAPI) AddTagGroup(request *String) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -229,6 +231,7 @@ func (service *ProteusAPI) AddTagGroup(request *String) (*Long, error) {
 	return response, nil
 }
 
+// AddTFTPGroup :: adds a TFTP Group
 func (service *ProteusAPI) AddTFTPGroup(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -239,6 +242,7 @@ func (service *ProteusAPI) AddTFTPGroup(request *Long) (*Long, error) {
 	return response, nil
 }
 
+// AddTFTPFolder :: adds a TFTP folder
 func (service *ProteusAPI) AddTFTPFolder(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -249,6 +253,7 @@ func (service *ProteusAPI) AddTFTPFolder(request *Long) (*Long, error) {
 	return response, nil
 }
 
+// AddTFTPFile :: adds a tftp file
 func (service *ProteusAPI) AddTFTPFile(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -259,6 +264,7 @@ func (service *ProteusAPI) AddTFTPFile(request *Long) (*Long, error) {
 	return response, nil
 }
 
+// AddTFTPDeploymentRole :: adds a tftp deployment role
 func (service *ProteusAPI) AddTFTPDeploymentRole(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -269,6 +275,7 @@ func (service *ProteusAPI) AddTFTPDeploymentRole(request *Long) (*Long, error) {
 	return response, nil
 }
 
+// AddServer :: adds a server
 func (service *ProteusAPI) AddServer(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -279,6 +286,7 @@ func (service *ProteusAPI) AddServer(request *Long) (*Long, error) {
 	return response, nil
 }
 
+// CreateXHAPair :: creates an XHA Pair
 func (service *ProteusAPI) CreateXHAPair(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -290,6 +298,8 @@ func (service *ProteusAPI) CreateXHAPair(request *Long) (*Long, error) {
 }
 
 /* Could be broken, no type in last parens, first param, * */
+
+// EditXHAPair :: edits an XHA Pair
 func (service *ProteusAPI) EditXHAPair(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -301,6 +311,8 @@ func (service *ProteusAPI) EditXHAPair(request *Long) (*Long, error) {
 }
 
 /* Could be broken, no type in last parens, first param, * */
+
+// DeployServerServices :: deploy a server services
 func (service *ProteusAPI) DeployServerServices(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -312,6 +324,8 @@ func (service *ProteusAPI) DeployServerServices(request *Long) (*Long, error) {
 }
 
 /* Could be broken, no type in last parens, first param, * */
+
+// DeployServerConfig :: deploys a server config
 func (service *ProteusAPI) DeployServerConfig(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -323,6 +337,8 @@ func (service *ProteusAPI) DeployServerConfig(request *Long) (*Long, error) {
 }
 
 /* Could be broken, no type in last parens, first param, * */
+
+// AddAdditionalIPAddresses :: add additional ip addresses
 func (service *ProteusAPI) AddAdditionalIPAddresses(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -334,6 +350,8 @@ func (service *ProteusAPI) AddAdditionalIPAddresses(request *Long) (*Long, error
 }
 
 /* Could be broken, no type in last parens, first param, * */
+
+// RemoveAdditionalIPAddresses :: removes additional IP Addresses
 func (service *ProteusAPI) RemoveAdditionalIPAddresses(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -344,6 +362,7 @@ func (service *ProteusAPI) RemoveAdditionalIPAddresses(request *Long) (*Long, er
 	return response, nil
 }
 
+// GetAdditionalIPAddresses :: get additional ip addresses
 func (service *ProteusAPI) GetAdditionalIPAddresses(request *Long) (*String, error) {
 	response := new(String)
 	err := service.client.Call("", request, response)
@@ -354,6 +373,7 @@ func (service *ProteusAPI) GetAdditionalIPAddresses(request *Long) (*String, err
 	return response, nil
 }
 
+// AssignIP4Address :: assign an ipv4 address
 func (service *ProteusAPI) AssignIP4Address(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -364,6 +384,7 @@ func (service *ProteusAPI) AssignIP4Address(request *Long) (*Long, error) {
 	return response, nil
 }
 
+// AssignNextAvailableIP4Address :: assigns the next available IPv4 address
 func (service *ProteusAPI) AssignNextAvailableIP4Address(request *Long) (*APIEntity, error) {
 	response := new(APIEntity)
 	err := service.client.Call("", request, response)
@@ -374,6 +395,7 @@ func (service *ProteusAPI) AssignNextAvailableIP4Address(request *Long) (*APIEnt
 	return response, nil
 }
 
+// GetNextIP4Address :: gets the next IPv4 address
 func (service *ProteusAPI) GetNextIP4Address(request *Long) (*String, error) {
 	response := new(String)
 	err := service.client.Call("", request, response)
@@ -384,6 +406,7 @@ func (service *ProteusAPI) GetNextIP4Address(request *Long) (*String, error) {
 	return response, nil
 }
 
+// GetMaxAllowedRange :: gets the max allowed range of ipv4 addresses
 func (service *ProteusAPI) GetMaxAllowedRange(request *Long) (*StringArray, error) {
 	response := new(StringArray)
 	err := service.client.Call("", request, response)
@@ -394,6 +417,7 @@ func (service *ProteusAPI) GetMaxAllowedRange(request *Long) (*StringArray, erro
 	return response, nil
 }
 
+// GetNextAvailableIPRanges :: gets the next available IP ranges
 func (service *ProteusAPI) GetNextAvailableIPRanges(request *Long) (*APIEntityArray, error) {
 	response := new(APIEntityArray)
 	err := service.client.Call("", request, response)
@@ -405,6 +429,8 @@ func (service *ProteusAPI) GetNextAvailableIPRanges(request *Long) (*APIEntityAr
 }
 
 /* Could be broken, no type in last parens, first param, * */
+
+// TagEntity :: tags an entity
 func (service *ProteusAPI) TagEntity(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -416,6 +442,8 @@ func (service *ProteusAPI) TagEntity(request *Long) (*Long, error) {
 }
 
 /* Could be broken, no type in last parens, first param, * */
+
+// UntagEntity :: untags an entity
 func (service *ProteusAPI) UntagEntity(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -427,6 +455,8 @@ func (service *ProteusAPI) UntagEntity(request *Long) (*Long, error) {
 }
 
 /* Could be broken, no type in last parens, first param, * */
+
+// QuickDeploy :: quick deploys
 func (service *ProteusAPI) QuickDeploy(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -437,6 +467,7 @@ func (service *ProteusAPI) QuickDeploy(request *Long) (*Long, error) {
 	return response, nil
 }
 
+// GetDependentRecords :: get dependent records
 func (service *ProteusAPI) GetDependentRecords(request *Long) (*APIEntityArray, error) {
 	response := new(APIEntityArray)
 	err := service.client.Call("", request, response)
@@ -447,6 +478,7 @@ func (service *ProteusAPI) GetDependentRecords(request *Long) (*APIEntityArray, 
 	return response, nil
 }
 
+// GetNetworkLinkedProperties :: get network linked properties
 func (service *ProteusAPI) GetNetworkLinkedProperties(request *Long) (*APIEntityArray, error) {
 	response := new(APIEntityArray)
 	err := service.client.Call("", request, response)
@@ -458,6 +490,8 @@ func (service *ProteusAPI) GetNetworkLinkedProperties(request *Long) (*APIEntity
 }
 
 /* Could be broken, no type in last parens, first param, * */
+
+// LinkEntities :: links entities
 func (service *ProteusAPI) LinkEntities(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -469,6 +503,8 @@ func (service *ProteusAPI) LinkEntities(request *Long) (*Long, error) {
 }
 
 /* Could be broken, no type in last parens, first param, * */
+
+// UnlinkEntities :: unlinks entities
 func (service *ProteusAPI) UnlinkEntities(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -479,6 +515,7 @@ func (service *ProteusAPI) UnlinkEntities(request *Long) (*Long, error) {
 	return response, nil
 }
 
+// GetServerForRole :: gets a server for a given role
 func (service *ProteusAPI) GetServerForRole(request *Long) (*APIEntity, error) {
 	response := new(APIEntity)
 	err := service.client.Call("", request, response)
@@ -489,6 +526,7 @@ func (service *ProteusAPI) GetServerForRole(request *Long) (*APIEntity, error) {
 	return response, nil
 }
 
+// GetMACAddressesInPool :: gets mac addresses in the pool
 func (service *ProteusAPI) GetMACAddressesInPool(request *Long) (*APIEntityArray, error) {
 	response := new(APIEntityArray)
 	err := service.client.Call("", request, response)
@@ -499,6 +537,7 @@ func (service *ProteusAPI) GetMACAddressesInPool(request *Long) (*APIEntityArray
 	return response, nil
 }
 
+// GetMACAddress :: gets a mac address for an entitiy
 func (service *ProteusAPI) GetMACAddress(request *Long) (*APIEntity, error) {
 	response := new(APIEntity)
 	err := service.client.Call("", request, response)
@@ -509,6 +548,7 @@ func (service *ProteusAPI) GetMACAddress(request *Long) (*APIEntity, error) {
 	return response, nil
 }
 
+// GetEntityByName :: gets an entity by name
 func (service *ProteusAPI) GetEntityByName(request *Long) (*APIEntity, error) {
 	response := new(APIEntity)
 	err := service.client.Call("", request, response)
@@ -519,6 +559,7 @@ func (service *ProteusAPI) GetEntityByName(request *Long) (*APIEntity, error) {
 	return response, nil
 }
 
+// GetEntitiesByName :: gets multiple entities by an array of entity names
 func (service *ProteusAPI) GetEntitiesByName(request *Long) (*APIEntityArray, error) {
 	response := new(APIEntityArray)
 	err := service.client.Call("", request, response)
@@ -529,6 +570,7 @@ func (service *ProteusAPI) GetEntitiesByName(request *Long) (*APIEntityArray, er
 	return response, nil
 }
 
+// GetEntitiesByNameUsingOptions :: gets entities by name using options
 func (service *ProteusAPI) GetEntitiesByNameUsingOptions(request *Long) (*APIEntityArray, error) {
 	response := new(APIEntityArray)
 	err := service.client.Call("", request, response)
@@ -539,6 +581,7 @@ func (service *ProteusAPI) GetEntitiesByNameUsingOptions(request *Long) (*APIEnt
 	return response, nil
 }
 
+// GetAliasesByHint :: get aliases by a hint string
 func (service *ProteusAPI) GetAliasesByHint(request *Int) (*APIEntityArray, error) {
 	response := new(APIEntityArray)
 	err := service.client.Call("", request, response)
@@ -549,6 +592,7 @@ func (service *ProteusAPI) GetAliasesByHint(request *Int) (*APIEntityArray, erro
 	return response, nil
 }
 
+// GethostRecordsByHint :: get hosts records by hint string
 func (service *ProteusAPI) GetHostRecordsByHint(request *Int) (*APIEntityArray, error) {
 	response := new(APIEntityArray)
 	err := service.client.Call("", request, response)
@@ -559,6 +603,7 @@ func (service *ProteusAPI) GetHostRecordsByHint(request *Int) (*APIEntityArray, 
 	return response, nil
 }
 
+// GetZonesByHint :: get zones by hint string
 func (service *ProteusAPI) GetZonesByHint(request *Long) (*APIEntityArray, error) {
 	response := new(APIEntityArray)
 	err := service.client.Call("", request, response)
@@ -569,6 +614,7 @@ func (service *ProteusAPI) GetZonesByHint(request *Long) (*APIEntityArray, error
 	return response, nil
 }
 
+// GetIP4NetworksByHint :: get ipv4 networks by hint string
 func (service *ProteusAPI) GetIP4NetworksByHint(request *Long) (*APIEntityArray, error) {
 	response := new(APIEntityArray)
 	err := service.client.Call("", request, response)
@@ -579,6 +625,7 @@ func (service *ProteusAPI) GetIP4NetworksByHint(request *Long) (*APIEntityArray,
 	return response, nil
 }
 
+// GetIP6ObjectsByHint :: get IPv6 objects by Hint string
 func (service *ProteusAPI) GetIP6ObjectsByHint(request *Long) (*APIEntityArray, error) {
 	response := new(APIEntityArray)
 	err := service.client.Call("", request, response)
@@ -590,6 +637,8 @@ func (service *ProteusAPI) GetIP6ObjectsByHint(request *Long) (*APIEntityArray, 
 }
 
 /* Could be broken, no type in last parens, first param, * */
+
+// UpdateWithOptions :: updates with options
 func (service *ProteusAPI) UpdateWithOptions(request *APIEntity) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -600,6 +649,7 @@ func (service *ProteusAPI) UpdateWithOptions(request *APIEntity) (*Long, error) 
 	return response, nil
 }
 
+// GetAccessRightsForEntity :: gets access rights for an entity
 func (service *ProteusAPI) GetAccessRightsForEntity(request *Long) (*APIAccessRightArray, error) {
 	response := new(APIAccessRightArray)
 	err := service.client.Call("", request, response)
@@ -610,6 +660,7 @@ func (service *ProteusAPI) GetAccessRightsForEntity(request *Long) (*APIAccessRi
 	return response, nil
 }
 
+// GetAccessRightsForUser :: gets access rights for a particular user
 func (service *ProteusAPI) GetAccessRightsForUser(request *Long) (*APIAccessRightArray, error) {
 	response := new(APIAccessRightArray)
 	err := service.client.Call("", request, response)
@@ -620,6 +671,7 @@ func (service *ProteusAPI) GetAccessRightsForUser(request *Long) (*APIAccessRigh
 	return response, nil
 }
 
+// DeleteAccessRight :: deletes access right
 func (service *ProteusAPI) DeleteAccessRight(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -630,6 +682,7 @@ func (service *ProteusAPI) DeleteAccessRight(request *Long) (*Long, error) {
 	return response, nil
 }
 
+// UpdateAccessRight :: updates access right
 func (service *ProteusAPI) UpdateAccessRight(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -640,6 +693,7 @@ func (service *ProteusAPI) UpdateAccessRight(request *Long) (*Long, error) {
 	return response, nil
 }
 
+// GetDeploymentRoles :: get deployment roles
 func (service *ProteusAPI) GetDeploymentRoles(request *Long) (*APIDeploymentRoleArray, error) {
 	response := new(APIDeploymentRoleArray)
 	err := service.client.Call("", request, response)
@@ -650,6 +704,7 @@ func (service *ProteusAPI) GetDeploymentRoles(request *Long) (*APIDeploymentRole
 	return response, nil
 }
 
+// GetServerDeploymentRoles :: get server deployment roles
 func (service *ProteusAPI) GetServerDeploymentRoles(request *Long) (*APIDeploymentRoleArray, error) {
 	response := new(APIDeploymentRoleArray)
 	err := service.client.Call("", request, response)
@@ -660,6 +715,7 @@ func (service *ProteusAPI) GetServerDeploymentRoles(request *Long) (*APIDeployme
 	return response, nil
 }
 
+// GetDNSDeploymentRole :: get dns deployment role
 func (service *ProteusAPI) GetDNSDeploymentRole(request *Long) (*APIDeploymentRole, error) {
 	response := new(APIDeploymentRole)
 	err := service.client.Call("", request, response)
@@ -670,6 +726,7 @@ func (service *ProteusAPI) GetDNSDeploymentRole(request *Long) (*APIDeploymentRo
 	return response, nil
 }
 
+// GetDNSDeploymentRoleForView :: get dns deployment role for view
 func (service *ProteusAPI) GetDNSDeploymentRoleForView(request *Long) (*APIDeploymentRole, error) {
 	response := new(APIDeploymentRole)
 	err := service.client.Call("", request, response)
@@ -680,6 +737,7 @@ func (service *ProteusAPI) GetDNSDeploymentRoleForView(request *Long) (*APIDeplo
 	return response, nil
 }
 
+// GetDHCPDeploymentRole :: get dhcp deployment role
 func (service *ProteusAPI) GetDHCPDeploymentRole(request *Long) (*APIDeploymentRole, error) {
 	response := new(APIDeploymentRole)
 	err := service.client.Call("", request, response)
@@ -691,6 +749,8 @@ func (service *ProteusAPI) GetDHCPDeploymentRole(request *Long) (*APIDeploymentR
 }
 
 /* Could be broken, no type in last parens, first param, * */
+
+// AddDNSDeploymentRole :: add dns deployment role
 func (service *ProteusAPI) AddDNSDeploymentRole(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -702,6 +762,8 @@ func (service *ProteusAPI) AddDNSDeploymentRole(request *Long) (*Long, error) {
 }
 
 /* Could be broken, no type in last parens, first param, * */
+
+// AddDHCPDeploymentRole :: add dhcp deployment role
 func (service *ProteusAPI) AddDHCPDeploymentRole(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -713,6 +775,8 @@ func (service *ProteusAPI) AddDHCPDeploymentRole(request *Long) (*Long, error) {
 }
 
 /* Could be broken, no type in last parens, first param, * */
+
+// DeleteDNSDeploymentRole :: delete dns deployment role
 func (service *ProteusAPI) DeleteDNSDeploymentRole(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -724,6 +788,8 @@ func (service *ProteusAPI) DeleteDNSDeploymentRole(request *Long) (*Long, error)
 }
 
 /* Could be broken, no type in last parens, first param, * */
+
+// DeleteDNSDeploymentRoleForView :: delete DNS deployment role for view
 func (service *ProteusAPI) DeleteDNSDeploymentRoleForView(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -735,6 +801,8 @@ func (service *ProteusAPI) DeleteDNSDeploymentRoleForView(request *Long) (*Long,
 }
 
 /* Could be broken, no type in last parens, first param, * */
+
+// DeleteDHCPDeploymentRole :: delete dhcp deployment role
 func (service *ProteusAPI) DeleteDHCPDeploymentRole(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -746,6 +814,8 @@ func (service *ProteusAPI) DeleteDHCPDeploymentRole(request *Long) (*Long, error
 }
 
 /* Could be broken, no type in last parens, first param, * */
+
+// UpdateDNSDeploymentRole :: update DNS deployment role
 func (service *ProteusAPI) UpdateDNSDeploymentRole(request *APIDeploymentRole) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -757,6 +827,8 @@ func (service *ProteusAPI) UpdateDNSDeploymentRole(request *APIDeploymentRole) (
 }
 
 /* Could be broken, no type in last parens, first param, * */
+
+// UpdateDHCPDeploymentRole :: update dhcp deployment role
 func (service *ProteusAPI) UpdateDHCPDeploymentRole(request *APIDeploymentRole) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -768,6 +840,8 @@ func (service *ProteusAPI) UpdateDHCPDeploymentRole(request *APIDeploymentRole) 
 }
 
 /* Could be broken, no type in last parens, first param, * */
+
+// MoveDeploymentRoles :: move deployment roles
 func (service *ProteusAPI) MoveDeploymentRoles(request *Long) (*Long, error) {
 	response := new(Long)
 	err := service.client.Call("", request, response)
@@ -778,6 +852,7 @@ func (service *ProteusAPI) MoveDeploymentRoles(request *Long) (*Long, error) {
 	return response, nil
 }
 
+// GetDeploymentOptions :: get deployment options
 func (service *ProteusAPI) GetDeploymentOptions(request *Long) (*APIDeploymentOptionArray, error) {
 	response := new(APIDeploymentOptionArray)
 	err := service.client.Call("", request, response)
