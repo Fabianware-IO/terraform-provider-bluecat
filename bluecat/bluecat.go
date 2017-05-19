@@ -19,6 +19,26 @@ type ProteusAPI struct {
 	client *SOAPClient
 }
 
+// Added!
+type Long struct{}
+type APIEntity struct{}
+type APIEntityArray struct{}
+type Int struct{}
+type APIDeploymentRole struct{}
+type APIDeploymentRoleArray struct{}
+type APIDeploymentOption struct{}
+type APIDeploymentOptionArray struct{}
+type LongArray struct{}
+type Boolean struct{}
+type String struct{}
+type APIAccessRight struct{}
+type APIData struct{}
+type StringArray struct{}
+type Base64Binary struct{}
+type APIAccessRightArray struct{}
+type APIUserDefinedFieldArray struct{}
+type ResponsePolicySearchResultArray struct{}
+
 func NewProteusAPI(url string, tls bool, auth *BasicAuth) *ProteusAPI {
 	if url == "" {
 		url = ""
@@ -222,7 +242,7 @@ func (service *ProteusAPI) CreateXHAPair(request *Long) (*Long, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) EditXHAPair(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -233,7 +253,7 @@ func (service *ProteusAPI) EditXHAPair(request *Long) (*Long, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) DeployServerServices(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -244,7 +264,7 @@ func (service *ProteusAPI) DeployServerServices(request *Long) (*Long, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) DeployServerConfig(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -255,7 +275,7 @@ func (service *ProteusAPI) DeployServerConfig(request *Long) (*Long, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) AddAdditionalIPAddresses(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -266,7 +286,7 @@ func (service *ProteusAPI) AddAdditionalIPAddresses(request *Long) (*Long, error
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) RemoveAdditionalIPAddresses(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -337,7 +357,7 @@ func (service *ProteusAPI) GetNextAvailableIPRanges(request *Long) (*APIEntityAr
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) TagEntity(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -348,7 +368,7 @@ func (service *ProteusAPI) TagEntity(request *Long) (*Long, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) UntagEntity(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -359,7 +379,7 @@ func (service *ProteusAPI) UntagEntity(request *Long) (*Long, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) QuickDeploy(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -390,7 +410,7 @@ func (service *ProteusAPI) GetNetworkLinkedProperties(request *Long) (*APIEntity
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) LinkEntities(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -401,7 +421,7 @@ func (service *ProteusAPI) LinkEntities(request *Long) (*Long, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) UnlinkEntities(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -522,7 +542,7 @@ func (service *ProteusAPI) GetIP6ObjectsByHint(request *Long) (*APIEntityArray, 
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) UpdateWithOptions(request *APIEntity) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -552,7 +572,7 @@ func (service *ProteusAPI) GetAccessRightsForUser(request *Long) (*APIAccessRigh
 }
 
 func (service *ProteusAPI) DeleteAccessRight(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -562,7 +582,7 @@ func (service *ProteusAPI) DeleteAccessRight(request *Long) (*Long, error) {
 }
 
 func (service *ProteusAPI) UpdateAccessRight(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -645,7 +665,7 @@ func (service *ProteusAPI) AddDHCPDeploymentRole(request *Long) (*Long, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) DeleteDNSDeploymentRole(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -656,7 +676,7 @@ func (service *ProteusAPI) DeleteDNSDeploymentRole(request *Long) (*Long, error)
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) DeleteDNSDeploymentRoleForView(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -667,7 +687,7 @@ func (service *ProteusAPI) DeleteDNSDeploymentRoleForView(request *Long) (*Long,
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) DeleteDHCPDeploymentRole(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -678,7 +698,7 @@ func (service *ProteusAPI) DeleteDHCPDeploymentRole(request *Long) (*Long, error
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) UpdateDNSDeploymentRole(request *APIDeploymentRole) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -689,7 +709,7 @@ func (service *ProteusAPI) UpdateDNSDeploymentRole(request *APIDeploymentRole) (
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) UpdateDHCPDeploymentRole(request *APIDeploymentRole) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -700,7 +720,7 @@ func (service *ProteusAPI) UpdateDHCPDeploymentRole(request *APIDeploymentRole) 
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) MoveDeploymentRoles(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -821,7 +841,7 @@ func (service *ProteusAPI) AddDHCP6ServiceDeploymentOption(request *Long) (*Long
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) DeleteDNSDeploymentOption(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -831,7 +851,7 @@ func (service *ProteusAPI) DeleteDNSDeploymentOption(request *Long) (*Long, erro
 }
 
 func (service *ProteusAPI) DeleteDHCPClientDeploymentOption(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -842,7 +862,7 @@ func (service *ProteusAPI) DeleteDHCPClientDeploymentOption(request *Long) (*Lon
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) DeleteDHCP6ClientDeploymentOption(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -853,7 +873,7 @@ func (service *ProteusAPI) DeleteDHCP6ClientDeploymentOption(request *Long) (*Lo
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) DeleteDHCPServiceDeploymentOption(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -864,7 +884,7 @@ func (service *ProteusAPI) DeleteDHCPServiceDeploymentOption(request *Long) (*Lo
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) DeleteDHCP6ServiceDeploymentOption(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -874,7 +894,7 @@ func (service *ProteusAPI) DeleteDHCP6ServiceDeploymentOption(request *Long) (*L
 }
 
 func (service *ProteusAPI) UpdateDNSDeploymentOption(request *APIDeploymentOption) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -884,7 +904,7 @@ func (service *ProteusAPI) UpdateDNSDeploymentOption(request *APIDeploymentOptio
 }
 
 func (service *ProteusAPI) UpdateDHCPClientDeploymentOption(request *APIDeploymentOption) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -895,7 +915,7 @@ func (service *ProteusAPI) UpdateDHCPClientDeploymentOption(request *APIDeployme
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) UpdateDHCP6ClientDeploymentOption(request *APIDeploymentOption) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -906,7 +926,7 @@ func (service *ProteusAPI) UpdateDHCP6ClientDeploymentOption(request *APIDeploym
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) UpdateDHCPServiceDeploymentOption(request *APIDeploymentOption) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -917,7 +937,7 @@ func (service *ProteusAPI) UpdateDHCPServiceDeploymentOption(request *APIDeploym
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) UpdateDHCP6ServiceDeploymentOption(request *APIDeploymentOption) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -938,7 +958,7 @@ func (service *ProteusAPI) AddMACAddress(request *Long) (*Long, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) AssociateMACAddressWithPool(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -949,7 +969,7 @@ func (service *ProteusAPI) AssociateMACAddressWithPool(request *Long) (*Long, er
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) DenyMACAddress(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -970,7 +990,7 @@ func (service *ProteusAPI) IsAddressAllocated(request *Long) (*Boolean, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) MergeSelectedBlocksOrNetworks(request *LongArray) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1000,7 +1020,7 @@ func (service *ProteusAPI) AddParentBlockWithProperties(request *LongArray) (*Lo
 }
 
 func (service *ProteusAPI) MergeBlocksWithParent(request *LongArray) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1011,7 +1031,7 @@ func (service *ProteusAPI) MergeBlocksWithParent(request *LongArray) (*Long, err
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) ResizeRange(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1022,7 +1042,7 @@ func (service *ProteusAPI) ResizeRange(request *Long) (*Long, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) MoveIP4Object(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1033,7 +1053,7 @@ func (service *ProteusAPI) MoveIP4Object(request *Long) (*Long, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) MoveIPObject(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1044,7 +1064,7 @@ func (service *ProteusAPI) MoveIPObject(request *Long) (*Long, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) MoveResourceRecord(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1105,7 +1125,7 @@ func (service *ProteusAPI) GetDHCPVendorDeploymentOption(request *Long) (*APIDep
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) UpdateDHCPVendorDeploymentOption(request *APIDeploymentOption) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1116,7 +1136,7 @@ func (service *ProteusAPI) UpdateDHCPVendorDeploymentOption(request *APIDeployme
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) DeleteDHCPVendorDeploymentOption(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1257,7 +1277,7 @@ func (service *ProteusAPI) AddZoneTemplate(request *Long) (*Long, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) AssignOrUpdateTemplate(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1268,7 +1288,7 @@ func (service *ProteusAPI) AssignOrUpdateTemplate(request *Long) (*Long, error) 
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) ReapplyTemplate(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1339,7 +1359,7 @@ func (service *ProteusAPI) AddBulkHostRecord(request *Long) (*APIEntityArray, er
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) MigrateFile(request *String) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1370,7 +1390,7 @@ func (service *ProteusAPI) AddIP4ReconciliationPolicy(request *Long) (*Long, err
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) ChangeStateIP4Address(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1441,7 +1461,7 @@ func (service *ProteusAPI) AddDeviceInstance(request *String) (*String, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) DeleteDeviceInstance(request *String) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1472,7 +1492,7 @@ func (service *ProteusAPI) AddResponsePolicy(request *Long) (*Long, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) UploadResponsePolicyItems(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1483,7 +1503,7 @@ func (service *ProteusAPI) UploadResponsePolicyItems(request *Long) (*Long, erro
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) ConfigureReplication(request *String) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1574,7 +1594,7 @@ func (service *ProteusAPI) GetDiscoveredDeviceMacAddressEntries(request *Long) (
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) StartProbe(request *String) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1595,7 +1615,7 @@ func (service *ProteusAPI) GetProbeData(request *String) (*APIData, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) ShareNetwork(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1606,7 +1626,7 @@ func (service *ProteusAPI) ShareNetwork(request *Long) (*Long, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) UnshareNetwork(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1667,7 +1687,7 @@ func (service *ProteusAPI) GetConfigurationSetting(request *Long) (*String, erro
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) UpdateConfigurationSetting(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1688,7 +1708,7 @@ func (service *ProteusAPI) AddRawDeploymentOption(request *Long) (*Long, error) 
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) UpdateRawDeploymentOption(request *APIDeploymentOption) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1699,7 +1719,7 @@ func (service *ProteusAPI) UpdateRawDeploymentOption(request *APIDeploymentOptio
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) Update(request *APIEntity) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1720,7 +1740,7 @@ func (service *ProteusAPI) GetParent(request *Long) (*APIEntity, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) Delete(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1731,7 +1751,7 @@ func (service *ProteusAPI) Delete(request *Long) (*Long, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) Login(request *String) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1742,7 +1762,7 @@ func (service *ProteusAPI) Login(request *String) (*Long, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) Logout() (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", nil, response)
 	if err != nil {
 		return nil, err
@@ -1803,7 +1823,7 @@ func (service *ProteusAPI) AddResourceRecord(request *Long) (*Long, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) ReplaceServer(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1874,7 +1894,7 @@ func (service *ProteusAPI) GetSystemInfo() (*String, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) DeployServer(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1885,7 +1905,7 @@ func (service *ProteusAPI) DeployServer(request *Long) (*Long, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) ImportServer(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -1996,7 +2016,7 @@ func (service *ProteusAPI) AddTag(request *Long) (*Long, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) DeleteWithOptions(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -2017,7 +2037,7 @@ func (service *ProteusAPI) AddIP4BlockByCIDR(request *Long) (*Long, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) FailoverXHA(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -2118,7 +2138,7 @@ func (service *ProteusAPI) AddEnumZone(request *Long) (*Long, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) LoginWithOptions(request *String) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
@@ -2129,7 +2149,7 @@ func (service *ProteusAPI) LoginWithOptions(request *String) (*Long, error) {
 
 /* Could be broken, no type in last parens, first param, * */
 func (service *ProteusAPI) BreakXHAPair(request *Long) (*Long, error) {
-	response := new()
+	response := new(Long)
 	err := service.client.Call("", request, response)
 	if err != nil {
 		return nil, err
