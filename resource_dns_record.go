@@ -1,7 +1,10 @@
 package provider
 
 import (
+	"fmt"
 	"sync"
+
+	"./bluecat"
 
 	"github.com/hashicorp/terraform/helper/schema"
 )
@@ -59,7 +62,7 @@ func resourceDNS() *schema.Resource {
 func resourceDNSRecordExists(d *schema.ResourceData, meta interface{}) (b bool, e error) {
 	mutex.Lock()
 
-	client := meta.(*bluecat.ProteusApi)
+	client := meta.(*bluecat.ProteusAPI)
 
 	record := &client.Record{
 		Name:  d.Get("name").(string),
@@ -69,15 +72,15 @@ func resourceDNSRecordExists(d *schema.ResourceData, meta interface{}) (b bool, 
 		Value: d.Get("value").(string),
 	}
 
-	switch(*record.type) {
-		case "A":
-			client.AddHostRecord(record)
-		case "SRV":
-			client.AddSRVRecord(record)
-		case "SOA":
+	switch *record.Type {
+	case "A":
+		client.AddHostRecord(record)
+	case "SRV":
+		client.AddSRVRecord(record)
+	case "SOA":
 		client.AddStartOfAuthority(record)
-		default:
-			fmt.PrintLn("not an accepted type")
+	default:
+		fmt.Println("not an accepted type")
 	}
 	return true, nil
 }
