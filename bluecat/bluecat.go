@@ -11,7 +11,7 @@ import (
 	"time"
 )
 
-// against "unused imports"
+/* against "unused imports" */
 var _ time.Time
 var _ xml.Name
 
@@ -20,7 +20,7 @@ type ProteusAPI struct {
 	client *SOAPClient
 }
 
-// Added!
+/* Added! */
 
 // Long :: Does Something
 type Long struct{}
@@ -67,7 +67,7 @@ type StringArray struct{}
 // Base64Binary :: does something
 type Base64Binary struct{}
 
-//APIAccessRightArray :: does something
+// APIAccessRightArray :: does something
 type APIAccessRightArray struct{}
 
 // APIUserDefinedFieldArray :: does something
